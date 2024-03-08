@@ -1,0 +1,75 @@
+
+<ion-content class="hola" [fullscreen]="true">
+
+  <div class="i-phone-14-15-pro-max-1">
+    <audio autoplay loop>
+      <source src="../../assets/audio/X2Download.app - Pokemon Theme Song 1 HOUR (128 kbps).mp3" type="audio/mpeg">
+      <!-- Si el navegador no es compatible con el formato MP3, puedes agregar más fuentes aquí -->
+    </audio>
+    <img class="pokedex-1" src="../../assets/imagenes/WhatsApp_Image_2024-03-08_at_11.55.30_AM-removebg-preview.png" />
+    <div class="frame-3">
+      <div class="frame-1"><input type="text" class="name-input" [(ngModel)]="search" value="search"/></div>
+      <div class="frame-2">
+        <!-- Buttons for numbers 0 to 9 -->
+      
+        <button (click)="setSearch('0')"class="number-btn">0</button>
+        <button (click)="setSearch('1')"class="number-btn">1</button>
+        <button (click)="setSearch('2')"class="number-btn">2</button>
+        <button (click)="setSearch('3')"class="number-btn">3</button>
+        <button (click)="setSearch('4')"class="number-btn">4</button>
+        <button (click)="setSearch('5')"class="number-btn">5</button>
+        <button (click)="setSearch('6')"class="number-btn">6</button>
+        <button (click)="setSearch('7')"class="number-btn">7</button>
+        <button (click)="setSearch('8')"class="number-btn">8</button>
+        <button (click)="setSearch('9')"class="number-btn">9</button>
+        
+  
+      </div>
+      <button class="frame-32">
+        
+          <button (click)="getPokemonDataID('cambio',id)"  id="miBoton" >CONSULTAR</button>
+         
+       
+      </button>
+      <button class="frame-4">
+        <button (click)="getPokemonDataID('cambio',search)"  id="miBoton" >CONSULTAR</button>
+      </button>
+      <div class="frame-5"><ion-label>Nombre:  </ion-label>
+        <ion-label > {{ search }} </ion-label></div>
+      <div class="frame-6"><ion-label *ngFor="let type of typesList">{{ type }} </ion-label></div>
+      <div class="frame-7">
+        <!-- Text field for names -->
+        <ion-input class="name-input2" type="text"[(ngModel)]="id"></ion-input>
+      </div>
+      <div class="frame-8"><section class="image-section">
+        <ion-img [src]=pokemon.sprites.front_default></ion-img>
+      </section></div>
+    </div>
+  </div>
+  <ion-card class="container" >
+
+    
+    
+   
+    
+ 
+  </ion-card>
+
+          
+            
+            
+          
+        
+           
+        
+
+  
+ 
+
+
+
+
+
+
+
+</ion-content>
